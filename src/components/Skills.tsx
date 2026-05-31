@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Server, Smartphone, Database, Layout, Hexagon } from 'lucide-react';
+import { Server, Smartphone, Database, Layout } from 'lucide-react';
 
 const Skills = () => {
   const categories = [
