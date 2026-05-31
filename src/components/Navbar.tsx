@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${scrolled || isOpen ? 'bg-slate-950/80 backdrop-blur-md border-b border-white/5 py-3' : 'bg-transparent py-5'}`}>
+      <nav className={`fixed top-0 left-0 w-full z-[100] py-4 transition-all duration-500 ease-in-out ${scrolled || isOpen ? 'bg-slate-950/80 backdrop-blur-md shadow-lg shadow-black/20' : 'bg-transparent shadow-none'}`}>
         <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
           <Link href="/" className="text-2xl font-extrabold tracking-tighter" onClick={() => setIsOpen(false)}>
             <span className="text-sky-400">i</span>Satish
