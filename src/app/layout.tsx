@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Satish Kumar Sharma | Full-Stack & Mobile App Developer",
-  description: "Self-taught developer specializing in React, Next.js, and Laravel. Explorer of real-world problem solving.",
-  keywords: ["Satish Kumar Sharma", "skwebs", "Full Stack Developer", "Mobile App Developer", "Laravel Developer", "React Developer", "isatish.in"],
+  title: "isatish.in | Satish Kumar Sharma",
+  description: "Full-Stack & Mobile App Developer specializing in React, Next.js, and Laravel.",
+  keywords: ["isatish", "isatish.in", "Satish Kumar Sharma", "skwebs", "Full Stack Developer"],
 };
 
 export default function RootLayout({

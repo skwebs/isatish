@@ -1,35 +1,68 @@
-import React from 'react';
-import { Github, ArrowRight } from 'lucide-react';
+"use client";
+
+import { motion } from 'framer-motion';
+import { Github, ArrowRight, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center pt-20 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-sky-500/10 rounded-full blur-[100px]" />
-      <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px]" />
-
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
-        <p className="text-sky-400 font-semibold mb-4 tracking-wide uppercase text-sm">Hello, I'm</p>
-        <h1 className="text-5xl md:text-8xl font-black mb-4 tracking-tighter leading-none">
-          Satish Kumar <br className="hidden md:block" /> Sharma
-        </h1>
-        <h2 className="text-2xl md:text-4xl text-slate-400 font-bold mb-8">
-          Full-Stack & Mobile App Developer
-        </h2>
-        <p className="text-lg text-slate-400 mb-10 max-w-2xl leading-relaxed">
-          Self-taught developer passionate about building scalable web and mobile applications. 
-          Specialist in <span className="text-white font-medium">React, Next.js, and Laravel</span> with a focus on solving real-world problems.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4">
-          <a href="#projects" className="inline-flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-600 text-slate-950 font-bold py-4 px-8 rounded-xl transition-all hover:-translate-y-1">
-            View My Work <ArrowRight size={20} />
-          </a>
-          <a href="https://github.com/skwebs" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 border border-sky-500/30 hover:bg-sky-500/10 text-sky-400 font-bold py-4 px-8 rounded-xl transition-all hover:-translate-y-1">
-            <Github size={20} /> GitHub Profile
-          </a>
-        </div>
+    <section className="min-h-[90vh] flex items-center justify-center pt-20 relative overflow-hidden">
+      {/* Decorative Glows */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-sky-500/10 rounded-full blur-[120px] pointer-events-none" />
+      
+      <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold tracking-widest uppercase mb-8">
+            <Sparkles size={14} /> Available for new projects
+          </div>
+          
+          <h1 className="text-6xl md:text-9xl font-black mb-6 tracking-tighter leading-[0.9] text-gradient">
+            Designing <span className="accent-gradient">Digital</span> <br /> Experiences.
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+            I&apos;m <span className="text-white font-medium">Satish Kumar Sharma</span>, a Full-Stack & Mobile Developer 
+            crafting high-performance solutions with React & Laravel.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <motion.a 
+              href="#projects" 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group relative inline-flex items-center justify-center gap-2 bg-white text-slate-950 font-bold py-5 px-10 rounded-2xl transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+            >
+              Explore My Work 
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            </motion.a>
+            
+            <motion.a 
+              href="https://github.com/skwebs" 
+              target="_blank" 
+              rel="noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center justify-center gap-2 text-white font-bold py-5 px-10 rounded-2xl border border-white/10 hover:bg-white/5 transition-all"
+            >
+              <Github size={20} /> GitHub
+            </motion.a>
+          </div>
+        </motion.div>
       </div>
+      
+      {/* Scroll indicator */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500"
+      >
+        <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Scroll</span>
+        <div className="w-[1px] h-12 bg-gradient-to-b from-sky-500 to-transparent" />
+      </motion.div>
     </section>
   );
 };

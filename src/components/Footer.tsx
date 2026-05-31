@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="text-2xl font-black tracking-tighter mb-6 block">
-              isatish<span className="text-sky-400">.in</span>
+              <span className="text-sky-400">i</span>Satish
             </Link>
             <p className="text-slate-500 max-w-sm leading-relaxed">
               Crafting high-performance web and mobile applications with a focus on clean code and exceptional user experience.
